@@ -12,12 +12,12 @@ public class Main {
 	Scanner sc = new Scanner(System.in);
 	int nro = sc.nextInt();
 	
-	int nroOrdenador = (int)(Math.random()*3)+1;
+	int nroOrdenador = (int)(Math.random()*5)+1;
 	
 	CharacterFactory pptUsuario = CharacterFactory.getInstance(nro);
 	CharacterFactory pptOrdenador = CharacterFactory.getInstance(nroOrdenador);
 	
-	pptUsuario.comparar(pptOrdenador);
+	pptUsuario.compare(pptOrdenador);
 	
 	System.out.println("\n\nEl resultado del juego es...");
 	System.out.println("El usuario eligió; " + pptUsuario.getName());

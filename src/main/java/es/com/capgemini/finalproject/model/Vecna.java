@@ -17,10 +17,32 @@ public class Vecna extends CharacterFactory {
 		
 	}
 	@Override
-	public int comparar(CharacterFactory pCharacters) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	public int compare(CharacterFactory pCharacterFactory) {
+		 
+		 int result = 0; 
+		 int ReceivedNumber = pCharacterFactory.getNumber();
+		 
+		 switch (ReceivedNumber) { 
+		 
+		 case MIKE: result = 1; descriptionResult = name + " le gana a " + 
+		 pCharacterFactory.getName(); break; 
+		
+		 case MAX: result = -1; descriptionResult = name + " pierde contra " +
+				 pCharacterFactory.getName(); break; 
+				 
+		 case ELEVEN: result = -1; descriptionResult = name + " pierde contra " +
+					 pCharacterFactory.getName(); break; 
+					 
+		 case DUSTIN: result = 1; descriptionResult = name + " le gana " +
+				 pCharacterFactory.getName(); break; 
+			 		 
+		 default: result = 0;
+		 descriptionResult = name + " empata con " +
+		 pCharacterFactory.getName(); break;
+		 } 
+		 return result;
+		 
+		}
 	
 
 }
