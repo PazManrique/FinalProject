@@ -8,11 +8,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class GameController  {
 
-	 @RequestMapping("/Rock-Paper-Scissors")
-	  public String hola(Model model) {
-	    
-	    
-	    model.addAttribute("mensaje","hola desde thymeleaf");
+	 @RequestMapping("/")
+	  public String gameIndex(Model model) {
+	   
 	    return "index";
+	  }
+	 
+	 @RequestMapping("/result")
+	  public String gameResult(Model model) {
+	    
+	
+	    return "result";
+	  }
+	 
+	 @RequestMapping("/table")
+	  public String gameTable(Model model) {
+	    
+	
+	    return "table";
 	  }
 }
