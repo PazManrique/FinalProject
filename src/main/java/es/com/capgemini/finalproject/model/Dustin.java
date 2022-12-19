@@ -16,28 +16,25 @@ public class Dustin extends CharacterFactory {
 		return number == DUSTIN;
 		
 	}
-
-
 	@Override
-	public int comparar(CharacterFactory pCharacterFactory) {
-	
-	int result = 0;
-		int ReceivedNumber = pCharacterFactory.getNumber();
-
-		switch (ReceivedNumber) {
-		case TIJERA:
-			result = -1;
-			descripcionResultado = nombre + " pierde con " + pPiedraPapelTijera.getNombre();
-		break;
-	case PIEDRA:
-		result = 1;
-			descripcionResultado = nombre + " le gana a " + pPiedraPapelTijera.getNombre();
-		break;
-	default:
-			result = 0;
-		descripcionResultado = nombre + " empata con " + pPiedraPapelTijera.getNombre();			break;
+	public int comparar(CharacterFactory pCharacters) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
-	return result;
+
+
+	/*
+	 * @Override public int comparar(CharacterFactory pCharacterFactory) {
+	 * 
+	 * int result = 0; int ReceivedNumber = pCharacterFactory.getNumber();
+	 * 
+	 * switch (ReceivedNumber) { case TIJERA: result = -1; descripcionResultado =
+	 * nombre + " pierde con " + pPiedraPapelTijera.getNombre(); break; case PIEDRA:
+	 * result = 1; descripcionResultado = nombre + " le gana a " +
+	 * pPiedraPapelTijera.getNombre(); break; default: result = 0;
+	 * descripcionResultado = nombre + " empata con " +
+	 * pPiedraPapelTijera.getNombre(); break; } return result;
+	 */
 	}
 
 
