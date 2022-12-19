@@ -9,29 +9,13 @@ import es.com.capgemini.finalproject.service.ResultService;
 
 @Controller
 @RequestMapping("/")
-public class GameController {
+public class GameController  {
 
-	private final ResultService resultService;
-	
-	public GameController (ResultService resultService){
-		this.resultService = resultService;
-	}
-	
-	@GetMapping("/")
-	public String gameIndex (Model model) {
-		return "index";
-		
-	}
-	
-	@GetMapping("/result")
-	public String gameResult (Model model) {
-		return "result";
-		
-	}
-	
-	@GetMapping("/table")
-	public String gameTable (Model model) {
-		return "table";
-		
-	}
+	 @RequestMapping("/Rock-Paper-Scissors")
+	  public String hola(Model model) {
+	    
+	    
+	    model.addAttribute("mensaje","hola desde thymeleaf");
+	    return "index";
+	  }
 }
