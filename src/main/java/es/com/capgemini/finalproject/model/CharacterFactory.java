@@ -51,7 +51,7 @@ public abstract class CharacterFactory {
 
 	public abstract boolean isMe(int number);
 
-	public abstract int comparar(CharacterFactory pCharacters);
+	public abstract int compare(CharacterFactory pCharacters);
 
 	public static CharacterFactory getInstance(int pNumber) {
 		// el padre conoce a todos sus hijos
