@@ -39,7 +39,7 @@ public class Result {
     @Column(name="computer_Choice", length = 45)
 	private String computerChoice;
     
-    @Column(name="computer_Choice", length = 45)
+    @Column(name="date_Time")
 	private Date dateTime;
 
 }
