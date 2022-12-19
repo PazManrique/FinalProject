@@ -5,9 +5,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<link href="<c:url value="/css/style.css"/>" rel="stylesheet" type="text/css">
+<link href="<c:url value="/css/table.css"/>" rel="stylesheet" type="text/css">
 </head>
 <body>
-<h1>INDEX</h1>
+<h1>TABLE</h1>
 </body>
 </html>
