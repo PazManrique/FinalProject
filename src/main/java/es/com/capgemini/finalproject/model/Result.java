@@ -2,6 +2,9 @@ package es.com.capgemini.finalproject.model;
 
 
 import java.sql.Date;
+import java.sql.Timestamp;
+
+import org.hibernate.annotations.CreationTimestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -29,17 +32,19 @@ public class Result {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idResults;
 	
-	@Column(name="player_Name", length = 45)
+	@Column(name="player_Name", length = 45, nullable = false)
 	private String playerName;
 	
     
-    @Column(name="player_Choice", length = 45)
+    @Column(name="player_Choice", length = 45, nullable = false)
 	private String playerChoice;
     
-    @Column(name="computer_Choice", length = 45)
+    @Column(name="computer_Choice", length = 45, nullable = false)
 	private String computerChoice;
+
     
-    @Column(name="date_Time")
-	private Date dateTime;
+    @Column(name = "date_Time")
+    @CreationTimestamp //this adds the default timestamp on save
+    private Timestamp dateTime;
 
 }
