@@ -1,5 +1,18 @@
 @charset "ISO-8859-1";
 
+body {
+	background: url(/images/background.png);
+	background-repeat: no-repeat;
+	background-size: fill;
+	font-family: 'Lacquer';
+}
+
 h1 {
 	color: blue;
+}
+
+section {
+	display: flex;
+	justify-content: center;
+	
 }

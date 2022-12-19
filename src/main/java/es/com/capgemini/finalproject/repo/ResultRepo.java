@@ -1,6 +1,7 @@
 package es.com.capgemini.finalproject.repo;
 
 import java.util.List;
+
 import java.util.Optional;
 import java.util.function.Function;
 
@@ -9,9 +10,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
+import org.springframework.stereotype.Repository;
 
 import es.com.capgemini.finalproject.model.Result;
 import es.com.capgemini.finalproject.service.ResultService;
+
 
 public class ResultRepo implements ResultService{
 
