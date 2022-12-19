@@ -1,28 +1,47 @@
 package es.com.capgemini.finalproject.model;
 
-public class Dustin {
-	private String name;
+public class Dustin extends CharacterFactory {
 
 	public Dustin() {
-		super();
-		// TODO Auto-generated constructor stub
+		this("dustin", DUSTIN);
+
+	}
+	public Dustin(String name, int number) {
+		super(name, number);
+		
 	}
 
-	public Dustin(String name) {
-		super();
-		this.name = name;
+	@Override
+	public boolean isMe(int number) {
+		return number == DUSTIN;
+		
 	}
 
-	public String getName() {
-		return name;
-	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
+	@Override
+	public int comparar(CharacterFactory pCharacterFactory) {
 	
-	
+	int result = 0;
+		int ReceivedNumber = pCharacterFactory.getNumber();
 
-}
+		switch (ReceivedNumber) {
+		case TIJERA:
+			result = -1;
+			descripcionResultado = nombre + " pierde con " + pPiedraPapelTijera.getNombre();
+		break;
+	case PIEDRA:
+		result = 1;
+			descripcionResultado = nombre + " le gana a " + pPiedraPapelTijera.getNombre();
+		break;
+	default:
+			result = 0;
+		descripcionResultado = nombre + " empata con " + pPiedraPapelTijera.getNombre();			break;
+	}
+	return result;
+	}
+
+
+
+
 
 
