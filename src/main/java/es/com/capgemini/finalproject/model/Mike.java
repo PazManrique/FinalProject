@@ -1,25 +1,27 @@
 package es.com.capgemini.finalproject.model;
 
-public class Mike {
-	private String name;
+public class Mike extends CharacterFactory {
+	public Mike() 
+	{
+		this("mike", MIKE);
 
-	public Mike() {
-		super();
-		// TODO Auto-generated constructor stub
+	}
+	public Mike(String name, int number) {
+		super(name, number);
+		
 	}
 
-	public Mike(String name) {
-		super();
-		this.name = name;
+	@Override
+	public boolean isMe(int number) {
+		return number == MIKE;
+		
+	}
+	@Override
+	public int comparar(CharacterFactory pCharacters) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 	
 
 }

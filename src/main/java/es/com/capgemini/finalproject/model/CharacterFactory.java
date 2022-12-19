@@ -5,7 +5,7 @@ import java.util.List;
 
 public abstract class CharacterFactory {
 	public static final int DUSTIN = 1;
-	public static final int ElEVEN = 2;
+	public static final int ELEVEN = 2;
 	public static final int MAX = 3;
 	public static final int MIKE = 4;
 	public static final int VECNA = 5;

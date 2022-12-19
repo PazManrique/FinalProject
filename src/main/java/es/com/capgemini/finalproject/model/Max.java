@@ -1,25 +1,27 @@
 package es.com.capgemini.finalproject.model;
 
-public class Max {
-	private String name;
+public class Max extends CharacterFactory {
+	public Max() 
+	{
+		this("max", MAX);
 
-	public Max() {
-		super();
-		// TODO Auto-generated constructor stub
+	}
+	public Max(String name, int number) {
+		super(name, number);
+		
 	}
 
-	public Max(String name) {
-		super();
-		this.name = name;
+	@Override
+	public boolean isMe(int number) {
+		return number == MAX;
+		
+	}
+	@Override
+	public int comparar(CharacterFactory pCharacters) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 	
 
 }
