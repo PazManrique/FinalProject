@@ -62,6 +62,7 @@
 			<artifactId>jasypt-spring-boot</artifactId>
 			<version>3.0.5</version>
 		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>

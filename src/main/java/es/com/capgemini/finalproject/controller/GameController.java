@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import es.com.capgemini.finalproject.service.ResultService;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/game")
 public class GameController {
 
 	private final ResultService resultService;
