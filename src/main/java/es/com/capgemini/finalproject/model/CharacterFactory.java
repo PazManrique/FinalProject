@@ -57,6 +57,12 @@ public abstract class CharacterFactory {
 		// el padre conoce a todos sus hijos
 		elements = new ArrayList<CharacterFactory>();
 		elements.add(new Dustin());
+		elements.add(new Eleven());
+		elements.add(new Max());
+		elements.add(new Mike());
+		elements.add(new Vecna());
+		
+		
 	
 
 		for (CharacterFactory CharacterFactory : elements) {
