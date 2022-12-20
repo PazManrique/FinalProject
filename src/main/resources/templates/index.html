@@ -15,14 +15,32 @@
 			<input type="text" placeholder="AÑADE TU NOMBRE">
 		</section>
 		<section id="img-character">
-			<img th:src="@{/images/mike.png}" /> <img th:src="@{/images/max.png}" />
-			<img th:src="@{/images/vecna.png}" /> <img
-				th:src="@{/images/eleven.png}" /> <img
+			<div>
+				<img th:src="@{/images/mike.png}" />
+				<input class="mike" type="checkbox">
+			</div>
+			<div>
+				<img th:src="@{/images/max.png}" />
+				<input class="max" type="checkbox">
+			</div>
+			<div>
+				<img th:src="@{/images/vecna.png}" />
+				<input class="vecna" type="checkbox">
+			</div>
+			<div>
+			<img
+				th:src="@{/images/eleven.png}" />
+				<input class="eleven" type="checkbox">
+			</div>
+			<div>
+				<img
 				th:src="@{/images/dustin.png}" />
+				<input class="dustin" type="checkbox">
+			</div>
 		</section>
 		<section id="buttons">
-			<button type="button">Jugar</button>
-			<button type="button">Ver Resultados</button>
+			<button class="button-play" type="button">Jugar</button>
+			<button class="button-results" type="button">Ver Resultados</button>
 		</section>
 		<section id="how-game">
 			<p>¿Cómo se juega a esto?</p>

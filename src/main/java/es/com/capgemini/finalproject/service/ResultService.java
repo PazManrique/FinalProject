@@ -2,15 +2,16 @@ package es.com.capgemini.finalproject.service;
 
 
 
-import java.util.List;
+
 import java.util.Optional;
-import java.util.Scanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import es.com.capgemini.finalproject.model.CharacterFactory;
-import es.com.capgemini.finalproject.model.Result;
+
+
+import es.com.capgemini.finalproject.model.Move;
+
 import es.com.capgemini.finalproject.repo.ResultRepo;
 import jakarta.transaction.Transactional;
 @Service
@@ -20,21 +21,21 @@ public class ResultService {
 	@Autowired
 	ResultRepo resultRepo;
 	
-	public Iterable<Result> resultList(){
+	public Iterable<Move> resultList(){
 		return resultRepo.findAll();
 		
 	}
 	
-	public void saveResult(Result pResult) {
+	public void saveResult(Move pResult) {
 		resultRepo.save(pResult);
 	}
 
 	
 	
-	 public Result findById(int theId) {
-			Optional<Result> result = resultRepo.findById(theId);
+	 public Move findById(int theId) {
+			Optional<Move> result = resultRepo.findById(theId);
 			
-			Result pResult = null;
+			Move pResult = null;
 			
 			if (result.isPresent()) {
 				pResult = result.get();
@@ -46,7 +47,7 @@ public class ResultService {
 			return pResult;
 		}
 
-		public void save(Result pResult) {
+		public void save(Move pResult) {
 			resultRepo.save(pResult);
 		}
 
