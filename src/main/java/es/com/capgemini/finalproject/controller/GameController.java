@@ -52,7 +52,6 @@ public class GameController  {
 	    }
 	 
 	 
-	
 
 	 @PostMapping("/Dresults") public Move addResult(@RequestBody Move
 
