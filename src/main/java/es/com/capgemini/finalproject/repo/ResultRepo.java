@@ -5,10 +5,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import es.com.capgemini.finalproject.model.Result;
+import es.com.capgemini.finalproject.model.Move;
 
 
-public interface ResultRepo extends JpaRepository<Result, Integer>{
+@Repository
+public interface ResultRepo extends CrudRepository<Move,Integer>{
 
 
 }

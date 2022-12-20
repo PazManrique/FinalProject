@@ -24,15 +24,14 @@ public class Dustin extends CharacterFactory {
 		 
 		 switch (ReceivedNumber) { 
 		 
-		 case MIKE: result = 1; descriptionResult = name + " gana a " + 
+		 case MIKE:
+		 case MAX:
+			 result = 1; descriptionResult = name + " gana a " + 
 		 pCharacterFactory.getName(); break; 
 		
-		 case MAX: result = 1; descriptionResult = name + " gana a " +
-				 pCharacterFactory.getName(); break; 
+		
 				 
-		 case ELEVEN: result = -1; descriptionResult = name + " pierde contra " +
-					 pCharacterFactory.getName(); break; 
-					 
+		 case ELEVEN:
 		 case VECNA: result = -1; descriptionResult = name + " pierde contra " +
 				 pCharacterFactory.getName(); break; 
 			 		 

@@ -24,15 +24,11 @@ public class Max extends CharacterFactory {
 		 
 		 switch (ReceivedNumber) { 
 		 
-		 case MIKE: result = -1; descriptionResult = name + " pierde contra " + 
-		 pCharacterFactory.getName(); break; 
-		
+		 case MIKE: 
 		 case DUSTIN: result = -1; descriptionResult = name + " pierde contra " +
 				 pCharacterFactory.getName(); break; 
 				 
-		 case ELEVEN: result = 1; descriptionResult = name + " le gana a " +
-					 pCharacterFactory.getName(); break; 
-					 
+		 case ELEVEN: 	 
 		 case VECNA: result = 1; descriptionResult = name + " le gana a " +
 				 pCharacterFactory.getName(); break; 
 			 		 

@@ -24,22 +24,22 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name="results")
-public class Result {
+@Table(name="moves")
+public class Move {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idResults;
+	private Integer idResults;
 	
-	@Column(name="player_Name", length = 45, nullable = false)
+	@Column(name="player_Name",  nullable = true)
 	private String playerName;
 	
     
-    @Column(name="player_Choice", length = 45, nullable = false)
-	private String playerChoice;
+    @Column(name="player_Choice")
+	private Integer playerChoice;
     
-    @Column(name="computer_Choice", length = 45, nullable = false)
-	private String computerChoice;
+    @Column(name="computer_Choice")
+	private Integer computerChoice;
 
     
     @Column(name = "date_Time")
