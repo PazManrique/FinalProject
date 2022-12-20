@@ -4,10 +4,10 @@ package es.com.capgemini.finalproject.repo;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import es.com.capgemini.finalproject.model.Result;
+import es.com.capgemini.finalproject.model.Move;
 
 @Repository
-public interface ResultRepo extends CrudRepository<Result, Integer>{
+public interface ResultRepo extends CrudRepository<Move, Integer>{
 
 
 }
