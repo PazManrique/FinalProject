@@ -11,9 +11,12 @@
 		<section id="title">
 			<h1>Introduce tu nombre y selecciona una carta</h1>
 		</section>
-		 <form action="#" th:action="@{/}" method="post" th:object="${move}">
+		
+		<form th:action="@{/table}" th:Object="${move}" method="post">
 		<section id="input-name">
-			<input class="input-placeholder" type="text" placeholder="AÑADE TU NOMBRE">
+
+			<input class="input-placeholder" name="playerName" th:field="*{playerName}" type="text" placeholder="AÑADE TU NOMBRE">
+
 		</section>
 		
 		<section id="img-character">
@@ -59,8 +62,8 @@
 			</div>
 		</section>
 		<section id="buttons">
-			<button class="button-play" type="submit" th:value="@{/results}">Jugar</button>
-			<button class="button-results" type="button" th:value=@{/table}>Ver Resultados</button>
+			<button class="button-play" type="submit">Jugar</button>
+			<button class="button-results" type="submit">Ver Resultados</button>
 		</section>
 		</form>
 		<section id="how-game">

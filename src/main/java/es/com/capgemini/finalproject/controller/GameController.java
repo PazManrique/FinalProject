@@ -32,14 +32,14 @@ public class GameController  {
 	  }
 	 
 
-	 @PostMapping("/Dresults") public String addResult(@RequestBody Move
+	 @PostMapping("/Dresults") public Move addResult(@RequestBody Move
 			  theResult) {
 		 
 			  theResult.setIdResults(0);
 			  
 			  resultService.saveResult(theResult);
 			  
-			  return "result";}
+			  return theResult;}
 
 	 
 	 @GetMapping("/Dtable")
