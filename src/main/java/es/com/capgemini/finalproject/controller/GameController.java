@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,6 +25,18 @@ public class GameController  {
 		 Iterable<Result> results = resultService.resultList();
 		 return new ResponseEntity<Iterable<Result>>(results, HttpStatus.OK);
 	  }
+	 
+	 
+	 
+	 @PostMapping("/results") public Result addResult(@RequestBody Result
+			  theResult) {
+			  
+			  
+		 theResult.setIdResults(0);
+			  
+			  resultService.saveResult(theResult);
+			  
+			  return theResult; }
 	 
 	 @PostMapping("/result")
 	  public String gameResult(Model model) {
