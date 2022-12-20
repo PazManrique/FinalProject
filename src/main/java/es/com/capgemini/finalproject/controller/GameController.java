@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -17,22 +18,41 @@ import org.springframework.web.bind.annotation.RestController;
 import es.com.capgemini.finalproject.model.Move;
 import es.com.capgemini.finalproject.service.ResultService;
 
-@RestController
 @Controller
 @RequestMapping("/")
 public class GameController  {
+	
 	@Autowired
-	ResultService resultService;
+	private ResultService resultService;
 	
 	 @GetMapping("/all")
-
 	  public ResponseEntity<Iterable<Move>> resultList(){
 		 Iterable<Move> results = resultService.resultList();
 		 return new ResponseEntity<Iterable<Move>>(results, HttpStatus.OK);
 	  }
 	 
 	 
-	 @PostMapping("/Dresults") public Move addResult(@RequestBody Move
+	 @GetMapping("/")
+	    public String moveForm(Model model){
+	        Move move = new Move();	       
+	        model.addAttribute("move", move);
+	        return "index";
+	    }
+	 @GetMapping("/table")
+	    public String listMOve(Model model) {
+	        model.addAttribute("moves", resultService.resultList());
+	        return "table";
+	    }
+	 
+	 @PostMapping("/table")
+	    public String saveStudent(@ModelAttribute("move") Move move) {
+	        resultService.saveResult(move);
+	        return "redirect:/table";
+	    }
+	 
+	 
+	 @PostMapping("/Dresults") 
+	 public Move addResult(@RequestBody Move
 			  theResult) {
 			  
 			  

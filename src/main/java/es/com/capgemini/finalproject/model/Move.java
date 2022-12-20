@@ -29,14 +29,14 @@ public class Move {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idResults;
 	
-	@Column(name="player_Name", length = 45, nullable = false)
+	@Column(name="player_Name",  nullable = true)
 	private String playerName;
 	
     
-    @Column(name="player_Choice",  nullable = false)
+    @Column(name="player_Choice")
 	private Integer playerChoice;
     
-    @Column(name="computer_Choice", nullable = false)
+    @Column(name="computer_Choice")
 	private Integer computerChoice;
 
     
