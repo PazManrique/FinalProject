@@ -13,7 +13,7 @@ import es.com.capgemini.finalproject.repo.ResultRepo;
 import jakarta.transaction.Transactional;
 @Service
 @Transactional
-public class ResultService {
+public class ResultService{
 	
 	@Autowired
 	ResultRepo resultRepo;
