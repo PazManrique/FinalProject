@@ -25,15 +25,11 @@ public int compare(CharacterFactory pCharacterFactory) {
 	 
 	 switch (ReceivedNumber) { 
 	 
-	 case MIKE: result = -1; descriptionResult = name + " pierde contra " + 
-	 pCharacterFactory.getName(); break; 
-	
+	 case MIKE:
 	 case MAX: result = -1; descriptionResult = name + " pierde contra " +
 			 pCharacterFactory.getName(); break; 
 			 
-	 case DUSTIN: result = 1; descriptionResult = name + " le gana a  " +
-				 pCharacterFactory.getName(); break; 
-				 
+	 case DUSTIN: 	 
 	 case VECNA: result = 1; descriptionResult = name + " le gana a " +
 			 pCharacterFactory.getName(); break; 
 		 		 
