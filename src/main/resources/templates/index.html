@@ -6,36 +6,53 @@
 	rel='stylesheet' type='text/css' />
 </head>
 <body>
-	<p th:text=${mensaje}></p>
 	<main>
 		<section id="title">
 			<h1>Introduce tu nombre y selecciona una carta</h1>
 		</section>
 		<section id="input-name">
-			<input type="text" placeholder="AÑADE TU NOMBRE">
+			<input class="input-placeholder" type="text" placeholder="AÑADE TU NOMBRE">
 		</section>
 		<section id="img-character">
 			<div>
-				<img th:src="@{/images/mike.png}" />
-				<input class="mike" type="checkbox">
+				<input class="checkbox" type="checkbox" id="myCheckbox-4" />
+      			<label for="myCheckbox-4">
+      			<img th:src="@{/images/mike.png}" />
+      			<span class="cover-checkbox">
+        </span>
+      </label>
 			</div>
 			<div>
-				<img th:src="@{/images/max.png}" />
-				<input class="max" type="checkbox">
+				<input class="checkbox" type="checkbox" id="myCheckbox-3" />
+      			<label for="myCheckbox-3">
+      			<img th:src="@{/images/max.png}" />
+      			<span class="cover-checkbox">
+        </span>
+      </label>
 			</div>
 			<div>
-				<img th:src="@{/images/vecna.png}" />
-				<input class="vecna" type="checkbox">
+				<input class="checkbox" type="checkbox" id="myCheckbox-5" />
+      			<label for="myCheckbox-5">
+      			<img th:src="@{/images/vecna.png}" />
+      			<span class="cover-checkbox">
+        </span>
+      </label>
 			</div>
 			<div>
-			<img
-				th:src="@{/images/eleven.png}" />
-				<input class="eleven" type="checkbox">
+				<input class="checkbox" type="checkbox" id="myCheckbox-2" />
+      			<label for="myCheckbox-2">
+      			<img th:src="@{/images/eleven.png}" />
+      			<span class="cover-checkbox">
+        </span>
+      </label>
 			</div>
 			<div>
-				<img
-				th:src="@{/images/dustin.png}" />
-				<input class="dustin" type="checkbox">
+				<input class="checkbox" type="checkbox" id="myCheckbox-1" />
+      			<label for="myCheckbox-1">
+      			<img th:src="@{/images/dustin.png}" />
+      			<span class="cover-checkbox">
+        </span>
+      </label>
 			</div>
 		</section>
 		<section id="buttons">

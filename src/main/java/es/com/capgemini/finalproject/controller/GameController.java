@@ -31,15 +31,15 @@ public class GameController  {
 	  }
 	 
 	 
-	 @PostMapping("/Dresults") public Result addResult(@RequestBody Result
-			  theResult) {
-			  
-			  
-		 theResult.setIdResults(0);
-			  
-			  resultService.saveResult(theResult);
-			  
-			  return theResult; }
+//	 @PostMapping("/Dresults") public Result addResult(@RequestBody Result
+//			  theResult) {
+//			  
+//			  
+//		 theResult.setIdResults(0);
+//			  
+//			  resultService.saveResult(theResult);
+//			  
+//			  return theResult; }
 	 
 	
 	 
