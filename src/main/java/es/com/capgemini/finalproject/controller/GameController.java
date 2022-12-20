@@ -31,6 +31,7 @@ public class GameController  {
 		 return new ResponseEntity<Iterable<Move>>(results, HttpStatus.OK);
 	  }
 	 
+
 	 
 	 @GetMapping("/")
 	    public String moveForm(Model model){
@@ -51,8 +52,10 @@ public class GameController  {
 	    }
 	 
 	 
-	 @PostMapping("/Dresults") 
-	 public Move addResult(@RequestBody Move
+	
+
+	 @PostMapping("/Dresults") public Move addResult(@RequestBody Move
+
 			  theResult) {
 			  
 			  
@@ -61,7 +64,6 @@ public class GameController  {
 			  resultService.saveResult(theResult);
 			  
 			  return theResult; }
-	 
 
 	 
 	 @GetMapping("/Dtable")
