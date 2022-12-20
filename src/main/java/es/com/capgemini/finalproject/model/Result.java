@@ -1,7 +1,6 @@
 package es.com.capgemini.finalproject.model;
 
 
-import java.sql.Date;
 import java.sql.Timestamp;
 
 import org.hibernate.annotations.CreationTimestamp;
@@ -44,7 +43,7 @@ public class Result {
 
     
     @Column(name = "date_Time")
-    @CreationTimestamp //this adds the default timestamp on save
+    @CreationTimestamp
     private Timestamp dateTime;
 
 }
