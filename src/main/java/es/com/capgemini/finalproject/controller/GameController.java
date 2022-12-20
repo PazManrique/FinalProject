@@ -40,15 +40,13 @@ public class GameController  {
 	 
 	 @PostMapping("/result")
 	  public String gameResult(Model model) {
-	    
-	
+	   
 	    return "result";
 	  }
 	 
-	 @RequestMapping("/table")
+	 @GetMapping("/table")
 	  public String gameTable(Model model) {
-	    
-	
+	   
 	    return "table";
 	  }
 }

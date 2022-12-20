@@ -1,9 +1,38 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <link th:href="@{/css/style.css}" rel="stylesheet" />
+<link
+	th:href="@{https://fonts.googleapis.com/css2?family=Lacquer&display=swap}"
+	rel='stylesheet' type='text/css' />
 </head>
 <body>
-<p th:text=${mensaje}></p>
-<h1>INDEX</h1>
+	<p th:text=${mensaje}></p>
+	<main>
+		<section id="title">
+			<h1>Introduce tu nombre y selecciona una carta</h1>
+		</section>
+		<section id="input-name">
+			<input type="text" placeholder="AÑADE TU NOMBRE">
+		</section>
+		<section id="img-character">
+			<img th:src="@{/images/mike.png}" /> <img th:src="@{/images/max.png}" />
+			<img th:src="@{/images/vecna.png}" /> <img
+				th:src="@{/images/eleven.png}" /> <img
+				th:src="@{/images/dustin.png}" />
+		</section>
+		<section id="buttons">
+			<button type="button">Jugar</button>
+			<button type="button">Ver Resultados</button>
+		</section>
+		<section id="how-game">
+			<p>¿Cómo se juega a esto?</p>
+		</section>
+	</main>
+	<footer>
+	<section id="copyright">
+		<p>Copyright Mazmorra Team</p>
+	</section>
+		
+	</footer>
 </body>
 </html>
