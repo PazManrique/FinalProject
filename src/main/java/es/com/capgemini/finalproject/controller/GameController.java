@@ -3,7 +3,7 @@ package es.com.capgemini.finalproject.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,18 +14,25 @@ import es.com.capgemini.finalproject.model.Result;
 import es.com.capgemini.finalproject.service.ResultService;
 
 @RestController
+@Controller
 @RequestMapping("/")
 public class GameController  {
 	@Autowired
 	ResultService resultService;
 
-	 @GetMapping("/")
+	 @GetMapping("/resultlist")
 	  public ResponseEntity<Iterable<Result>> resultList(){
 		 Iterable<Result> results = resultService.resultList();
 		 return new ResponseEntity<Iterable<Result>>(results, HttpStatus.OK);
 	  }
 	 
-	 @PostMapping("/result")
+	 @GetMapping("/game")
+	  public String gameIndex (Model model){
+		 
+		 return "index";
+	  }
+	 
+	 @GetMapping("/result")
 	  public String gameResult(Model model) {
 	   
 	    return "result";
