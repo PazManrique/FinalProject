@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import es.com.capgemini.finalproject.model.Result;
+import es.com.capgemini.finalproject.model.Move;
 import es.com.capgemini.finalproject.service.ResultService;
 
 @RestController
@@ -25,23 +25,23 @@ public class GameController  {
 	ResultService resultService;
 	
 	 @GetMapping("/all")
-	  public ResponseEntity<Iterable<Result>> resultList(){
-		 Iterable<Result> results = resultService.resultList();
-		 return new ResponseEntity<Iterable<Result>>(results, HttpStatus.OK);
+
+	  public ResponseEntity<Iterable<Move>> resultList(){
+		 Iterable<Move> results = resultService.resultList();
+		 return new ResponseEntity<Iterable<Move>>(results, HttpStatus.OK);
 	  }
 	 
-	 
-//	 @PostMapping("/Dresults") public Result addResult(@RequestBody Result
-//			  theResult) {
-//			  
-//			  
-//		 theResult.setIdResults(0);
-//			  
-//			  resultService.saveResult(theResult);
-//			  
-//			  return theResult; }
-	 
-	
+
+	 @PostMapping("/Dresults") public Move addResult(@RequestBody Move
+			  theResult) {
+			  
+			  
+		 theResult.setIdResults(0);
+			  
+			  resultService.saveResult(theResult);
+			  
+			  return theResult; }
+
 	 
 	 @GetMapping("/Dtable")
 	  public String gameTable(Model model) {
@@ -51,7 +51,7 @@ public class GameController  {
 	 
 	 
 	 @PutMapping("/Dtable")
-		public Result updateProduct(@RequestBody Result theResult) {
+		public Move updateProduct(@RequestBody Move theResult) {
 			
 		 resultService.saveResult(theResult);
 			
@@ -63,7 +63,7 @@ public class GameController  {
 		@DeleteMapping("/DProducts/{productId}")
 		public String deleteProduct(@PathVariable int idResults) {
 			
-			Result tempProduct = resultService.findById(idResults);
+			Move tempProduct = resultService.findById(idResults);
 			
 			// throw exception if null
 			
