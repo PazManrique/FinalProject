@@ -24,18 +24,15 @@ public class Vecna extends CharacterFactory {
 		 
 		 switch (ReceivedNumber) { 
 		 
-		 case MIKE: result = 1; descriptionResult = name + " le gana a " + 
-		 pCharacterFactory.getName(); break; 
+		 case MIKE: 	 
+	 case DUSTIN: result = 1; descriptionResult = name + " le gana " +
+			 pCharacterFactory.getName(); break; 
+		 		 
 		
-		 case MAX: result = -1; descriptionResult = name + " pierde contra " +
-				 pCharacterFactory.getName(); break; 
-				 
+		 case MAX: 
 		 case ELEVEN: result = -1; descriptionResult = name + " pierde contra " +
 					 pCharacterFactory.getName(); break; 
-					 
-		 case DUSTIN: result = 1; descriptionResult = name + " le gana " +
-				 pCharacterFactory.getName(); break; 
-			 		 
+		
 		 default: result = 0;
 		 descriptionResult = name + " empata con " +
 		 pCharacterFactory.getName(); break;
