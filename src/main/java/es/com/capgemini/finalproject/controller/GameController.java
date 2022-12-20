@@ -32,15 +32,14 @@ public class GameController  {
 	  }
 	 
 
-	 @PostMapping("/Dresults") public Move addResult(@RequestBody Move
+	 @PostMapping("/Dresults") public String addResult(@RequestBody Move
 			  theResult) {
-			  
-			  
-		 theResult.setIdResults(0);
+		 
+			  theResult.setIdResults(0);
 			  
 			  resultService.saveResult(theResult);
 			  
-			  return theResult; }
+			  return "result";}
 
 	 
 	 @GetMapping("/Dtable")
@@ -75,9 +74,4 @@ public class GameController  {
 			
 			return "Deleted Product id - " + idResults;
 		}
-	 
-	 
-	 
-	 
-	 
 }

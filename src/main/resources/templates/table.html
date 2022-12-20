@@ -4,11 +4,27 @@
 <link
 	th:href="@{https://fonts.googleapis.com/css2?family=Lacquer&display=swap}"
 	rel='stylesheet' type='text/css' />
-</head>
-<meta charset="ISO-8859-1">
-<title>Tabla Resultados</title>
+	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<h1>TABLE</h1>
+	<main>
+		<section id="title">
+			<h1>Resultados</h1>
+		</section>
+		
+		<section id="buttons">
+			<button class="button-play" type="submit" th:value="@{/results}">Jugar</button>
+			<button class="button-results" type="button" th:value=@{/table}>Ver Resultados</button>
+		</section>
+		<section id="how-game">
+			<p>¿Cómo se juega a esto?</p>
+		</section>
+	</main>
+	<footer>
+	<section id="copyright">
+		<p>Copyright Mazmorra Team</p>
+	</section>
+		
+	</footer>
 </body>
 </html>
