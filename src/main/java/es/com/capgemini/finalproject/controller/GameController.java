@@ -20,7 +20,7 @@ public class GameController  {
 	@Autowired
 	ResultService resultService;
 
-	 @GetMapping("/")
+	 @GetMapping("/api")
 	  public ResponseEntity<Iterable<Result>> resultList(){
 		 Iterable<Result> results = resultService.resultList();
 		 return new ResponseEntity<Iterable<Result>>(results, HttpStatus.OK);
@@ -38,7 +38,7 @@ public class GameController  {
 			  
 			  return theResult; }
 	 
-	 @PostMapping("/result")
+	 @GetMapping("/result")
 	  public String gameResult(Model model) {
 	   
 	    return "result";
