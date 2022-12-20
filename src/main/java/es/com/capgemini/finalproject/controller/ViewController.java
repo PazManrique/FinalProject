@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import es.com.capgemini.finalproject.model.Move;
 @Controller
-@RequestMapping("/aei")
+@RequestMapping("/game")
 public class ViewController {
 	
 	 @GetMapping("/")
@@ -17,7 +17,7 @@ public class ViewController {
 	  }
 	 
 	 
-	 @GetMapping("/res")
+	 @GetMapping("/result")
 	  public String gameResults(Model model) {
 		 return "result";
 	  }
