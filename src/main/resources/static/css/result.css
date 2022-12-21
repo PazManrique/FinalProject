@@ -13,6 +13,11 @@ body {
 	font-family: 'Lacquer';
 }
 
+iframe {
+	visibility: hidden;
+	z-index: 1;
+}
+
 #title {
 	display: flex;
 	justify-content: center;

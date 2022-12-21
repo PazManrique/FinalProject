@@ -4,13 +4,14 @@
 	margin: 0;
 	padding: auto;
 	font-family: 'Lacquer';
+	cursor: url(/images/cursorflechast.png), auto;
 }
 
 body {
 	background: url(/images/background.png);
 	background-repeat: no-repeat;
 	background-size: fill;
-	font-family: 'Lacquer';
+	font-family: 'Lacquer';	
 }
 
 #title {
@@ -170,4 +171,11 @@ label {
   height: 100%;
   position: relative;
  
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
 }

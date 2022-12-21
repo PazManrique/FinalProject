@@ -43,6 +43,7 @@ public class GameController  {
             model.addAttribute("move", move);
             return "index";
         }
+     
      @GetMapping("/table")
         public String listMOve(Model model) {
             model.addAttribute("moves", resultService.resultList());
@@ -55,17 +56,10 @@ public class GameController  {
             return "redirect:/table";
         }
      
-     
-
- 
-
      @PostMapping("/Dresults") public Move addResult(@RequestBody Move
 
- 
-
               theResult) {
-              
-              
+ 
          theResult.setIdResults(0);
               
               resultService.saveResult(theResult);
@@ -77,7 +71,6 @@ public class GameController  {
      
      @GetMapping("/Dtable")
       public String gameTable(Model model) {
-       
         return "table";
       }
      
