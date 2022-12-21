@@ -3,6 +3,9 @@ package es.com.capgemini.finalproject.model;
 
 import java.sql.Timestamp;
 
+import java.text.SimpleDateFormat;
+
+
 import org.hibernate.annotations.CreationTimestamp;
 
 import jakarta.persistence.Column;
@@ -47,6 +50,7 @@ public class Move {
     private Timestamp dateTime;
 
 
+
 	public Move(Integer idResults, String playerName, Integer playerChoice, Integer computerChoice) {
 		super();
 		this.idResults = idResults;
@@ -55,10 +59,22 @@ public class Move {
 		this.computerChoice = computerChoice;
 	}
 
-
-
-
     
+  
+    
+  public Result moveResult( ) {
+	  	CharacterFactory computerChoiceNumber = CharacterFactory.getInstance(computerChoice);
+		String computerChoiceName = computerChoiceNumber.getName();
+		CharacterFactory playerChoiceNumber = CharacterFactory.getInstance(playerChoice);
+		String playerChoiceName = playerChoiceNumber.getName();
+		 
+	  computerChoiceNumber.compare(playerChoiceNumber);
+	  SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+	 
+	  return new Result(playerName, playerChoiceName, computerChoiceName, computerChoiceNumber.getDescriptionResult(), sdf.format(dateTime));
+		 }
+  
+
 }
 
 
