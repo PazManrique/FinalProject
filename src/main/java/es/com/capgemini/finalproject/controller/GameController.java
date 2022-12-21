@@ -24,8 +24,8 @@ import es.com.capgemini.finalproject.service.ResultService;
 
  
 
-//@Controller
-//@RequestMapping("/aei")
+@Controller
+@RequestMapping("/")
 public class GameController  {
     
     @Autowired
