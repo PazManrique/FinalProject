@@ -51,13 +51,13 @@ public class GameController  {
         }
      
      @PostMapping("/table")
-        public String saveStudent(@ModelAttribute("move") Move move) {
+        public String saveMove(@ModelAttribute("move") Move move) {
             resultService.saveResult(move);
             resultService.saveResultComputer(move);
           
             
        
-            return "redirect:/table";
+            return "redirect:/result";
         }
      
      @PostMapping("/Dresults") public Move addResult(@RequestBody Move
