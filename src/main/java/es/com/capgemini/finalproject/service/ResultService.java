@@ -27,8 +27,8 @@ public class ResultService{
 	public Result saveResultComputer(Move pResult) {
 		pResult.setComputerChoice((int)(Math.random()*5)+1);
 		resultRepo.save(pResult);
-		
 		return pResult.moveResult();
+		
 	}
 
 }
