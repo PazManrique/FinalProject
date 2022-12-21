@@ -43,7 +43,20 @@ public class Move {
     @Column(name = "date_Time")
     @CreationTimestamp
     private Timestamp dateTime;
-
+    
+  
+    
+  public void moveResult(CharacterFactory pCharacterFactory ) {
+	  CharacterFactory computerChoiceNumber = CharacterFactory.getInstance(computerChoice);
+		//String computerChoiceName = computerChoiceNumber.getName();
+		CharacterFactory playerChoiceNumber = CharacterFactory.getInstance(playerChoice);
+		//String playerChoiceName = playerChoiceNumber.getName();
+		 
+	  computerChoiceNumber.compare(playerChoiceNumber);
+		 
+		 }
+     
+			
 }
 
 

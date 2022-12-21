@@ -8,8 +8,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
-
+import es.com.capgemini.finalproject.model.CharacterFactory;
 import es.com.capgemini.finalproject.model.Move;
 
 import es.com.capgemini.finalproject.repo.ResultRepo;
