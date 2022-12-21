@@ -1,6 +1,5 @@
 package es.com.capgemini.finalproject.controller;
 
- 
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +18,6 @@ import es.com.capgemini.finalproject.model.Move;
 import es.com.capgemini.finalproject.model.Result;
 import es.com.capgemini.finalproject.service.ResultService;
 
- 
 
 @Controller
 @RequestMapping("/")
