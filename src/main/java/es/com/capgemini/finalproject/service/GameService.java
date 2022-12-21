@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import es.com.capgemini.finalproject.model.CharacterFactory;
 
-@Service
+//@Service
 public class GameService {
 	int playerNumber= (int)(Math.random()*5)+1;
 	int computerNumber = (int)(Math.random()*5)+1;

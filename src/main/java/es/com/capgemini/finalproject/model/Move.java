@@ -46,4 +46,17 @@ public class Move {
     @CreationTimestamp
     private Timestamp dateTime;
 
+
+	public Move(Integer idResults, String playerName, Integer playerChoice, Integer computerChoice) {
+		super();
+		this.idResults = idResults;
+		this.playerName = playerName;
+		this.playerChoice = playerChoice;
+		this.computerChoice = computerChoice;
+	}
+
+
+
+
+    
 }

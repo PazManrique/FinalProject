@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import es.com.capgemini.finalproject.model.Move;
-@Controller
-@RequestMapping("/game")
+//@Controller
+//@RequestMapping("/game")
 public class ViewController {
 	
 	 @GetMapping("/")

@@ -1,7 +1,17 @@
 package es.com.capgemini.finalproject.model;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
+
+import jakarta.persistence.Entity;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+
 
 public abstract class CharacterFactory {
 	public static final int DUSTIN = 1;
@@ -23,6 +33,9 @@ public abstract class CharacterFactory {
 	public CharacterFactory(String name, int number) {
 		this.name = name;
 		this.number = number;
+	}
+	public CharacterFactory() {
+		
 	}
 
 	// Accesos
@@ -48,6 +61,8 @@ public abstract class CharacterFactory {
 	}
 
 	// Métodos de negocio
+	
+	
 
 	public abstract boolean isMe(int number);
 

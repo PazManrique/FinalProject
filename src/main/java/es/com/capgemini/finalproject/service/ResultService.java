@@ -14,8 +14,8 @@ import es.com.capgemini.finalproject.model.Move;
 
 import es.com.capgemini.finalproject.repo.ResultRepo;
 import jakarta.transaction.Transactional;
-@Service
-@Transactional
+//@Service
+//@Transactional
 public class ResultService{
 	
 	@Autowired

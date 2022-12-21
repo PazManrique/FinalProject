@@ -2,6 +2,8 @@ package es.com.capgemini.finalproject.controller;
 
  
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,15 +18,14 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
- 
-
+import es.com.capgemini.finalproject.model.CharacterFactory;
 import es.com.capgemini.finalproject.model.Move;
 import es.com.capgemini.finalproject.service.ResultService;
 
  
 
-@Controller
-@RequestMapping("/")
+//@Controller
+//@RequestMapping("/aei")
 public class GameController  {
     
     @Autowired
@@ -37,10 +38,18 @@ public class GameController  {
       }
      
      
-     @GetMapping("/")
+     @GetMapping("/iou")
         public String moveForm(Model model){
-            Move move = new Move();           
+            Move move = new Move();
+//            CharacterFactory fig = new CharacterFactory() {
+//				
+//				
+//			};
+			CharacterFactory fig = CharacterFactory.getInstance(0);
             model.addAttribute("move", move);
+            model.addAttribute("fig", fig);
+            model.addAttribute("figu", CharacterFactory.getInstance(1));
+          
             return "index";
         }
      @GetMapping("/table")
