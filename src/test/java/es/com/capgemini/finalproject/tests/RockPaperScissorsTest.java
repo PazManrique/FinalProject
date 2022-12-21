@@ -74,6 +74,16 @@ class RockPaperScissorsTest {
 	void testGetInstanceEleven_true() {
 		assertTrue(CharacterFactory.getInstance(CharacterFactory.ELEVEN) instanceof Eleven);
 	}
+	
+	@Test
+	void testGetInstanceVecna_true() {
+		assertTrue(CharacterFactory.getInstance(CharacterFactory.VECNA) instanceof Vecna);
+	}
+
+	@Test
+	void testGetInstanceMike_true() {
+		assertTrue(CharacterFactory.getInstance(CharacterFactory.MIKE) instanceof Eleven);
+	}
 
 	@Test
 	void testGetInstanceDustin_false() {
@@ -88,6 +98,16 @@ class RockPaperScissorsTest {
 	@Test
 	void testGetInstanceEleven_false() {
 		assertFalse(CharacterFactory.getInstance(CharacterFactory.ELEVEN) instanceof Max);
+	}
+	
+	@Test
+	void testGetInstanceVecna_false() {
+		assertFalse(CharacterFactory.getInstance(CharacterFactory.VECNA) instanceof Vecna);
+	}
+
+	@Test
+	void testGetInstanceMike_false() {
+		assertFalse(CharacterFactory.getInstance(CharacterFactory.MIKE) instanceof Mike);
 	}
 
 	// dustin
