@@ -15,8 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-
- 
+import org.springframework.web.bind.annotation.RequestParam;
 
 import es.com.capgemini.finalproject.model.Move;
 import es.com.capgemini.finalproject.service.ResultService;
@@ -51,7 +50,7 @@ public class GameController  {
         }
      
      @PostMapping("/table")
-        public String saveStudent(@ModelAttribute("move") Move move) {
+        public String saveStudent(@RequestParam("move") Move move) {
             resultService.saveResult(move);
             return "redirect:/table";
         }

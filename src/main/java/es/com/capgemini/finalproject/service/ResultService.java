@@ -29,39 +29,4 @@ public class ResultService{
 	public void saveResult(Move pResult) {
 		resultRepo.save(pResult);
 	}
-
-	
-	
-	 public Move findById(int theId) {
-			Optional<Move> result = resultRepo.findById(theId);
-			
-			Move pResult = null;
-			
-			if (result.isPresent()) {
-				pResult = result.get();
-			}
-			else {
-				throw new RuntimeException("Did not find product id - " + theId);
-			}
-			
-			return pResult;
-		}
-
-		public void save(Move pResult) {
-			resultRepo.save(pResult);
-		}
-
-		public void deleteById(int theId) {
-			resultRepo.deleteById(theId);
-		}
-	
-	
-	
-	
-		
-		
-		
-		
-		
-		
 }
