@@ -55,7 +55,7 @@ public class GameController  {
         }
      
      @GetMapping("/result")
-     public String getMove(Model model, Move move) {
+     public String getMove(Move move, Model model) {
     	 Result result = move.moveResult();
          model.addAttribute("result", result);
          return "result";
