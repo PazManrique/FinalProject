@@ -52,6 +52,7 @@ public class GameController  {
           
             return "index";
         }
+     
      @GetMapping("/table")
         public String listMOve(Model model) {
             model.addAttribute("moves", resultService.resultList());
@@ -59,22 +60,19 @@ public class GameController  {
         }
      
      @PostMapping("/table")
-        public String saveStudent(@ModelAttribute("move") Move move) {
+        public String saveMove(@ModelAttribute("move") Move move) {
             resultService.saveResult(move);
-            return "redirect:/table";
+            resultService.saveResultComputer(move);
+          
+            
+       
+            return "redirect:/result";
         }
      
-     
-
- 
-
      @PostMapping("/Dresults") public Move addResult(@RequestBody Move
 
- 
-
               theResult) {
-              
-              
+ 
          theResult.setIdResults(0);
               
               resultService.saveResult(theResult);
@@ -86,36 +84,10 @@ public class GameController  {
      
      @GetMapping("/Dtable")
       public String gameTable(Model model) {
-       
         return "table";
       }
      
-     
-     @PutMapping("/Dtable")
-        public Move updateProduct(@RequestBody Move theResult) {
-            
-         resultService.saveResult(theResult);
-            
-            return theResult;
-        }
-        
-        // add mapping for DELETE /Products/{productId} - delete Product
-        
-        @DeleteMapping("/DProducts/{productId}")
-        public String deleteProduct(@PathVariable int idResults) {
-            
-            Move tempProduct = resultService.findById(idResults);
-            
-            // throw exception if null
-            
-            if (tempProduct == null) {
-                throw new RuntimeException("Product id not found - " + idResults);
-            }
-            
-            resultService.deleteById(idResults);
-            
-            return "Deleted Product id - " + idResults;
-        }
+
      
      
      

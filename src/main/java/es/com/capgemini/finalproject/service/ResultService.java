@@ -31,31 +31,13 @@ public class ResultService{
 	}
 
 	
-	
-	 public Move findById(int theId) {
-			Optional<Move> result = resultRepo.findById(theId);
-			
-			Move pResult = null;
-			
-			if (result.isPresent()) {
-				pResult = result.get();
-			}
-			else {
-				throw new RuntimeException("Did not find product id - " + theId);
-			}
-			
-			return pResult;
-		}
+	public void saveResultComputer(Move pResult) {
+		pResult.setComputerChoice((int)(Math.random()*5)+1);
+		resultRepo.save(pResult);
+		
+	}
 
-		public void save(Move pResult) {
-			resultRepo.save(pResult);
-		}
-
-		public void deleteById(int theId) {
-			resultRepo.deleteById(theId);
-		}
-	
-	
+		
 	
 	
 		
