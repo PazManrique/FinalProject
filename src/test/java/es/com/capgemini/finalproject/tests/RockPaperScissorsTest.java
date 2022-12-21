@@ -82,7 +82,7 @@ class RockPaperScissorsTest {
 
 	@Test
 	void testGetInstanceMike_true() {
-		assertTrue(CharacterFactory.getInstance(CharacterFactory.MIKE) instanceof Eleven);
+		assertTrue(CharacterFactory.getInstance(CharacterFactory.MIKE) instanceof Mike);
 	}
 
 	@Test
@@ -102,12 +102,12 @@ class RockPaperScissorsTest {
 	
 	@Test
 	void testGetInstanceVecna_false() {
-		assertFalse(CharacterFactory.getInstance(CharacterFactory.VECNA) instanceof Vecna);
+		assertFalse(CharacterFactory.getInstance(CharacterFactory.VECNA) instanceof Max);
 	}
 
 	@Test
 	void testGetInstanceMike_false() {
-		assertFalse(CharacterFactory.getInstance(CharacterFactory.MIKE) instanceof Mike);
+		assertFalse(CharacterFactory.getInstance(CharacterFactory.MIKE) instanceof Max);
 	}
 
 	// dustin
