@@ -92,14 +92,14 @@ class RockPaperScissorsTest {
 
 	// dustin
 	@Test
-	void testDustinLeGanaAEleven() {
-		assertEquals(1, dustin.compare(eleven));
+	void testDustinPierdeContraEleven() {
+		assertEquals(-1, dustin.compare(eleven));
 
 	}
 
 	@Test
-	void testDustinPierdeConMax() {
-		assertEquals(-1, dustin.compare(max));
+	void testDustinGanaConMax() {
+		assertEquals(1, dustin.compare(max));
 
 	}
 
@@ -112,14 +112,14 @@ class RockPaperScissorsTest {
 	// eleven
 
 	@Test
-	void testElevenGanaMax() {
-		assertEquals(1, eleven.compare(max));
+	void testElevenPierdeContraMax() {
+		assertEquals(-1, eleven.compare(max));
 
 	}
 
 	@Test
-	void testElevenPierdeDustin() {
-		assertEquals(-1, eleven.compare(dustin));
+	void testElevenGanaDustin() {
+		assertEquals(1, eleven.compare(dustin));
 
 	}
 
@@ -133,14 +133,14 @@ class RockPaperScissorsTest {
 	// max
 
 	@Test
-	void testMaxGanaDustin() {
-		assertEquals(1, max.compare(dustin));
+	void testMaxPierdeDustin() {
+		assertEquals(-1, max.compare(dustin));
 
 	}
 
 	@Test
-	void testMaxPierdeEleven() {
-		assertEquals(-1, max.compare(eleven));
+	void testMaxGanaEleven() {
+		assertEquals(1, max.compare(eleven));
 
 	}
 
@@ -160,25 +160,25 @@ class RockPaperScissorsTest {
 	}
 
 	@Test
-	void testMaxTextoPierde() {
+	void testMaxTextoGana() {
 		max.compare(eleven);
-		assertEquals("max pierde con eleven", max.getDescriptionResult());
+		assertEquals("max le gana a eleven", max.getDescriptionResult());
 
 	}
 
 	@Test
-	void testMaxTextoGana() {
+	void testMaxTextoPierde() {
 		max.compare(dustin);
-		assertEquals("max le gana a dustin", max.getDescriptionResult());
+		assertEquals("max pierde contra dustin", max.getDescriptionResult());
 
 	}
 
 	// dustin
 
 	@Test
-	void testDustinTextoPierde() {
+	void testDustinTextoGanaMax() {
 		dustin.compare(max);
-		assertEquals("dustin pierde con max", dustin.getDescriptionResult());
+		assertEquals("dustin gana a max", dustin.getDescriptionResult());
 
 	}
 
@@ -190,25 +190,25 @@ class RockPaperScissorsTest {
 	}
 
 	@Test
-	void testDustinTextoGana() {
+	void testDustinTextoPierdeEleven() {
 		dustin.compare(eleven);
-		assertEquals("dustin le gana a eleven", dustin.getDescriptionResult());
+		assertEquals("dustin pierde contra eleven", dustin.getDescriptionResult());
 
 	}
 
 	// eleven
 
 	@Test
-	void testElevenTextoGana() {
+	void testElevenTextoPierde() {
 		eleven.compare(max);
-		assertEquals("eleven le gana a max", eleven.getDescriptionResult());
+		assertEquals("eleven pierde contra max", eleven.getDescriptionResult());
 
 	}
 
 	@Test
-	void testElevenTextoPierde() {
+	void testElevenTextoGana() {
 		eleven.compare(dustin);
-		assertEquals("eleven pierde con dustin", eleven.getDescriptionResult());
+		assertEquals("eleven le gana a dustin", eleven.getDescriptionResult());
 
 	}
 
