@@ -29,7 +29,7 @@ public class ResultService{
 	public void saveResultComputer(Move pResult) {
 		pResult.setComputerChoice((int)(Math.random()*5)+1);
 		resultRepo.save(pResult);
-		System.out.println(pResult);
+		
 	}
 
 }
