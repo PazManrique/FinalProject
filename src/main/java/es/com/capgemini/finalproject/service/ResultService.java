@@ -1,10 +1,6 @@
 package es.com.capgemini.finalproject.service;
 
 
-
-
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,4 +25,11 @@ public class ResultService{
 	public void saveResult(Move pResult) {
 		resultRepo.save(pResult);
 	}
+	
+	public void saveResultComputer(Move pResult) {
+		pResult.setComputerChoice((int)(Math.random()*5)+1);
+		resultRepo.save(pResult);
+		System.out.println(pResult);
+	}
+
 }

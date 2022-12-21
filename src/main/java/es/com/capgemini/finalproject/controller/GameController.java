@@ -52,6 +52,7 @@ public class GameController  {
      @PostMapping("/table")
         public String saveStudent(@RequestParam("move") Move move) {
             resultService.saveResult(move);
+            resultService.saveResultComputer(move);
             return "redirect:/table";
         }
      
@@ -73,32 +74,7 @@ public class GameController  {
         return "table";
       }
      
-     
-     @PutMapping("/Dtable")
-        public Move updateProduct(@RequestBody Move theResult) {
-            
-         resultService.saveResult(theResult);
-            
-            return theResult;
-        }
-        
-        // add mapping for DELETE /Products/{productId} - delete Product
-        
-        @DeleteMapping("/DProducts/{productId}")
-        public String deleteProduct(@PathVariable int idResults) {
-            
-            Move tempProduct = resultService.findById(idResults);
-            
-            // throw exception if null
-            
-            if (tempProduct == null) {
-                throw new RuntimeException("Product id not found - " + idResults);
-            }
-            
-            resultService.deleteById(idResults);
-            
-            return "Deleted Product id - " + idResults;
-        }
+
      
      
      
