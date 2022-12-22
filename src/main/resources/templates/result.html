@@ -8,21 +8,17 @@
 </head>
 <body>
 	<main>
-		<section id="title">
-			<h1>¿Habrás ganado?</h1>
-		</section>
-		<section id="title2">
-		<h2>¡Has perdido!</h2>
-		</section>
-		<section id="img-character">
-    		<span th:text="${result.playerChoiceDescription}"></span>
-    		<span th:text="${result.computerChoiceDescription}"></span>
-    		<span th:text="${result.descriptionResult}"></span>
-    		<span th:text="${result.dateResult}"></span>
-    		<span th:text="${result.playerName}"></span>
+		<section id="result">
+		<h2>Has elegido:</h2>
+		<h3 th:text="${result.playerChoiceDescription}"></h3>
+		<h2>Upside Down ha elegido:</h2>
+		<h3 th:text="${result.computerChoiceDescription}"></h3>
+		<span class="result-description">
+    		<h1 th:text="${result.descriptionResult}"></h1>
+    	</span>
     	</section>
 		<section id="buttons">
-			<button class="button-play" type="submit" th:value="@{/results}">Jugar</button>
+			<button class="button-play" type="submit" th:value="@{/results}">Volver a Jugar</button>
 			<button class="button-results" type="button" th:value=@{/table}>Ver Resultados</button>
 		</section>
 		<section id="how-game">
