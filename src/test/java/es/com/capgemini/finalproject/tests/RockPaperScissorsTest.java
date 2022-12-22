@@ -119,10 +119,23 @@ class RockPaperScissorsTest {
 		assertEquals(-1, dustin.compare(eleven));
 
 	}
+	
+	@Test
+	void testDustinPierdeContraVecna() {
+		assertEquals(-1, dustin.compare(vecna));
+
+	}
+
 
 	@Test
 	void testDustinGanaConMax() {
 		assertEquals(1, dustin.compare(max));
+
+	}
+	
+	@Test
+	void testDustinGanaConMike() {
+		assertEquals(1, dustin.compare(mike));
 
 	}
 
@@ -139,10 +152,22 @@ class RockPaperScissorsTest {
 		assertEquals(-1, eleven.compare(max));
 
 	}
+	
+	@Test
+	void testElevenPierdeContraMike() {
+		assertEquals(-1, eleven.compare(mike));
+
+	}
 
 	@Test
 	void testElevenGanaDustin() {
 		assertEquals(1, eleven.compare(dustin));
+
+	}
+	
+	@Test
+	void testElevenGanaContraVecna() {
+		assertEquals(1, eleven.compare(vecna));
 
 	}
 
@@ -160,10 +185,22 @@ class RockPaperScissorsTest {
 		assertEquals(-1, max.compare(dustin));
 
 	}
+	
+	@Test
+	void testMaxPierdeContraMike() {
+		assertEquals(-1, max.compare(mike));
+
+	}
 
 	@Test
 	void testMaxGanaEleven() {
 		assertEquals(1, max.compare(eleven));
+
+	}
+	
+	@Test
+	void testMaxGanaVecna() {
+		assertEquals(1, max.compare(vecna));
 
 	}
 
@@ -172,6 +209,71 @@ class RockPaperScissorsTest {
 		assertEquals(0, max2.compare(max));
 
 	}
+	
+	
+	// vecna
+
+		@Test
+		void testVecnaPierdeMax() {
+			assertEquals(-1, vecna.compare(max));
+
+		}
+		
+		@Test
+		void testMaxPierdeContraEleven() {
+			assertEquals(-1, vecna.compare(eleven));
+
+		}
+
+		@Test
+		void testMaxGanaMike() {
+			assertEquals(1, vecna.compare(mike));
+
+		}
+		
+		@Test
+		void testMaxGanaDustin() {
+			assertEquals(1, vecna.compare(dustin));
+
+		}
+
+		@Test
+		void testVecnaEmpataVecna() {
+			assertEquals(0, vecna2.compare(vecna));
+
+		}
+		
+		// mike
+
+				@Test
+				void testMikeaPierdeDustin() {
+					assertEquals(-1, mike.compare(dustin));
+
+				}
+				
+				@Test
+				void testMikePierdeContraVecna() {
+					assertEquals(-1, mike.compare(vecna));
+
+				}
+
+				@Test
+				void testMikeGanaEleven() {
+					assertEquals(1, mike.compare(eleven));
+
+				}
+				
+				@Test
+				void testMikeGanaMax() {
+					assertEquals(1, mike.compare(max));
+
+				}
+
+				@Test
+				void testMikeEmpataMike() {
+					assertEquals(0, mike2.compare(mike));
+
+				}
 
 	// max texto
 
