@@ -173,11 +173,21 @@ input:checked +  img {
 input:checked + label .cover-checkbox {
   opacity: 1;
   transform: scale(1);
+  
 }
 
 input:checked + label .cover-checkbox svg {
   stroke-dashoffset: 0;
 }
+
+input:checked + label {
+  color: red;
+}
+
+input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 3px red;
+}
+
 
 label {
   display: inline-block;
