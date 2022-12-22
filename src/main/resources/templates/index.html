@@ -16,7 +16,7 @@
 		<form th:action="@{/result}" th:Object="${move}" method="post">
 		<section id="input-name">
 
-			<input class="input-placeholder" name="playerName" th:field="*{playerName}" type="text" placeholder="AÑADE TU NOMBRE">
+			<input class="input-placeholder" name="playerName" th:field="*{playerName}" type="text" placeholder="AÑADE TU NOMBRE" required>
 
 		</section>
 		
@@ -66,13 +66,13 @@
 		
 		<section id="buttons">
 			<button class="button-play" type="submit">Jugar</button>
-			<button class="button-results" type="button" th:action="@{/templates/table}">Ver Resultados</button>
+			<a th:href="@{/table}"><button class="button-results" type="button" th:action="@{/templates/table}">Ver Resultados</button></a>
 		</section>
 		</form>
 		<section id="how-game">
 			<p>¿Cómo se juega a esto?</p>
 		</section>
-	</main>
+	</main>			
 	<footer>
 	<section id="copyright">
 		<p>Copyright Mazmorra Team</p>
