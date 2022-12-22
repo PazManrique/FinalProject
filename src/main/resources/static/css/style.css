@@ -264,6 +264,13 @@ footer {
   transition: all 5s ease-in-out;
 }
 
+.instructions {
+	margin: 70px auto;
+  padding: 20px;
+  width: 100%;
+	
+}
+
 .popup h2 {
   margin-top: 0;
   color: #333;
