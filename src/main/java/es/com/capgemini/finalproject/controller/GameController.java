@@ -26,11 +26,7 @@ public class GameController  {
     @Autowired
     private ResultService resultService;
     
-     @GetMapping("/all")
-      public ResponseEntity<Iterable<Move>> resultList(){
-         Iterable<Move> results = resultService.resultList();
-         return new ResponseEntity<Iterable<Move>>(results, HttpStatus.OK);
-      }
+	
      
      
      @GetMapping("/")
@@ -62,27 +58,8 @@ public class GameController  {
             return "result";
         }
      
-//     @GetMapping("/result")
-//     public String getMove(Model model, Move move) {
-//    	 
-//		return result;
-//     }
-//     
-     @PostMapping("/Dresults") public Move addResult(@RequestBody Move
-
-              theResult) {
  
-         theResult.setIdResults(0);
-              
-              resultService.saveResult(theResult);
-              
-              return theResult; }
-
  
 
      
-     @GetMapping("/Dtable")
-      public String gameTable(Model model) {
-        return "table";
-      }  
 }
