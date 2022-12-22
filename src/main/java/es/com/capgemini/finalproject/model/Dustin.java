@@ -1,21 +1,48 @@
 package es.com.capgemini.finalproject.model;
 
+/**
+ * This class contains the attributes and methods of a character.
+ * @author Paz, Viviana, Nerea, Cristina
+ */
+
 public class Dustin extends CharacterFactory {
+	
+	 /**
+     * Constructors
+     */
 
 	public Dustin() {
 		this("dustin", DUSTIN);
 
 	}
+	
+	/**
+     * Parameterized constructor
+     * @param name Character's name
+     * @param number Character's number
+     * 
+     */
+	
 	public Dustin(String name, int number) {
 		super(name, number);
 		
 	}
+	
+	/**
+     * Method to compare the received number and the 
+     * character number
+     */
 
 	@Override
 	public boolean isMe(int number) {
-		return number == DUSTIN;
-		
+		return number == DUSTIN;	
 	}
+	
+	/**
+     * Method that evaluates all possible cases of game result
+     * 
+     */
+	
 	@Override
 	public int compare(CharacterFactory pCharacterFactory) {
 		 
