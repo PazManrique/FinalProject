@@ -12,16 +12,18 @@
 			<h1>Stranger Choice</h1>
 			<h2>Introduce tu nombre y selecciona una carta... si te atreves</h2>
 		</section>
-		
+
 		<form th:action="@{/result}" th:Object="${move}" method="post">
+
 		<section id="input-name">
 
-			<input class="input-placeholder" name="playerName" th:field="*{playerName}" type="text" placeholder="AÑADE TU NOMBRE">
+			<input class="input-placeholder" name="playerName" th:field="${move.playerName}" type="text" placeholder="AÑADE TU NOMBRE">
 
 		</section>
 		
-		<section id="img-character">
+		<section   id="img-character">
 			<div>
+
 				<input name="checkbox" class="checkbox" type="checkbox" value="4" id="myCheckbox-4"  th:field="*{playerChoice}" />
       			<label for="myCheckbox-4">
       			<img th:src="@{/images/mike.png}" />

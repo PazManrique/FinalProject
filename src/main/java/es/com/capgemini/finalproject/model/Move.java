@@ -1,7 +1,10 @@
 package es.com.capgemini.finalproject.model;
 
+
 import java.sql.Timestamp;
+
 import java.text.SimpleDateFormat;
+
 
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -45,6 +48,17 @@ public class Move {
     @Column(name = "date_Time")
     @CreationTimestamp
     private Timestamp dateTime;
+
+
+
+	public Move(Integer idResults, String playerName, Integer playerChoice, Integer computerChoice) {
+		super();
+		this.idResults = idResults;
+		this.playerName = playerName;
+		this.playerChoice = playerChoice;
+		this.computerChoice = computerChoice;
+	}
+
     
   
     
@@ -60,9 +74,7 @@ public class Move {
 	  return new Result(playerName, playerChoiceName, computerChoiceName, computerChoiceNumber.getDescriptionResult(), sdf.format(dateTime));
 		 }
   
-  
-     
-			
+
 }
 
 
