@@ -18,8 +18,8 @@
     	</span>
     	</section>
 		<section id="buttons">
-			<button class="button-play" type="submit" th:value="@{/results}">Volver a Jugar</button>
-			<button class="button-results" type="button" th:value=@{/table}>Ver Resultados</button>
+			<a th:href="@{/}"><button class="button-play" type="button" th:action="@{/templates/index}">Volver a jugar</button></a>
+				<a th:href="@{/table}"><button class="button-results" type="button" th:action="@{/templates/table}">Ver Resultados</button></a>
 		</section>
 		<section id="how-game">
 			<div class="box">
