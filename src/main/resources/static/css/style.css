@@ -140,9 +140,6 @@ footer {
 	padding: 1vw;
 }
 
-input[type="checkbox"] {
-	display:none;
-}
 
 input[type="checkbox"]:after {
   position: absolute;
