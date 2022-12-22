@@ -26,20 +26,11 @@ public class GameController  {
     @Autowired
     private ResultService resultService;
     
-	
-     
      
      @GetMapping("/")
         public String moveForm(Model model){
-            Move move = new Move();
-//            CharacterFactory fig = new CharacterFactory() {
-//				
-//				
-//			};
-			CharacterFactory fig = CharacterFactory.getInstance(0);
+            Move move = new Move();     
             model.addAttribute("move", move);
-            model.addAttribute("fig", fig);
-            model.addAttribute("figu", CharacterFactory.getInstance(1));
           
             return "index";
         }
