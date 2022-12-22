@@ -15,13 +15,12 @@
 		<h2>¡Has perdido!</h2>
 		</section>
 		<section id="img-character">
-			<p th:each="move : ${result}">
-    		<span th:text="${move.playerChoiceDescription}"></span>
-    		<span th:text="${move.computerChoiceDescription ? }"></span>
-    		<span th:text="${move.descriptionResult}"></span>
-    		<span th:text="${move.dateResult}"></span>
-    		<span th:text="${move.playerName}"></span>
-			</p>
+    		<span th:text="${result.playerChoiceDescription}"></span>
+    		<span th:text="${result.computerChoiceDescription}"></span>
+    		<span th:text="${result.descriptionResult}"></span>
+    		<span th:text="${result.dateResult}"></span>
+    		<span th:text="${result.playerName}"></span>
+    	</section>
 		<section id="buttons">
 			<button class="button-play" type="submit" th:value="@{/results}">Jugar</button>
 			<button class="button-results" type="button" th:value=@{/table}>Ver Resultados</button>

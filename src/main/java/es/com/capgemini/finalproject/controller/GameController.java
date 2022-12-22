@@ -47,20 +47,20 @@ public class GameController  {
             return "table";
         }
      
-     @PostMapping("/table")
-        public String saveMove(@ModelAttribute("move") Move move) {
+     @PostMapping("/result")
+        public String saveMove(@ModelAttribute("move") Move move, Model model) {
             resultService.saveResult(move);
-            resultService.saveResultComputer(move);
-            return "redirect:/result";
+            Result result = move.moveResult();
+            model.addAttribute("result", result);
+            return "result";
         }
      
-     @GetMapping("/result")
-     public String getMove(Model model, Move move) {
-    	 Result result = move.moveResult();
-         model.addAttribute("result", result);
-         return "result";
-     }
-     
+//     @GetMapping("/result")
+//     public String getMove(Model model, Move move) {
+//    	 
+//		return result;
+//     }
+//     
      @PostMapping("/Dresults") public Move addResult(@RequestBody Move
 
               theResult) {
