@@ -2,6 +2,12 @@ package es.com.capgemini.finalproject.model;
 
 import lombok.Data;
 
+/**
+ * This class has the attributes and constructor for the result
+ * @author Viviana, Paz, Nerea, Cristina
+ * 
+ */
+
 @Data
 public class Result {
 	private String playerName;

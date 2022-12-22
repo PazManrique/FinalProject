@@ -26,6 +26,13 @@ public class GameController  {
     @Autowired
     private ResultService resultService;
     
+<<<<<<< HEAD
+=======
+    
+  
+	
+     
+>>>>>>> c92296bd5e3c2bc5ad79c8b6b674b401431e52c6
      
      @GetMapping("/")
         public String moveForm(Model model){
@@ -36,8 +43,8 @@ public class GameController  {
         }
      
      @GetMapping("/table")
-        public String listMOve(Model model) {
-            model.addAttribute("moves", resultService.resultList());
+        public String listResult(Model model) {
+            model.addAttribute("results", resultService.resultList());
             return "table";
         }
      

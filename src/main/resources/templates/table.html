@@ -29,8 +29,8 @@
         </table>
 		</section>
 		<section id="buttons">
-			<button class="button-play" type="submit" th:value="@{/results}">Jugar</button>
-			<button class="button-results" type="button" th:value=@{/table}>Ver Resultados</button>
+			<a th:href="@{/}"><button class="button-play" type="button" th:action="@{/templates/index}">Volver a jugar</button></a>
+			
 		</section>
 	</main>
 	<footer>

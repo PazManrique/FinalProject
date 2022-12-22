@@ -176,7 +176,7 @@ footer {
   margin: 70px auto;
   padding: 20px;
   background: rgba(7, 126, 30, 0.5);
-  width: 30%;
+  width: 100%;
   position: relative;
   transition: all 5s ease-in-out;
 }
@@ -200,6 +200,6 @@ footer {
   background: rgba(7, 126, 30, 0.5);
 }
 .popup .content {
-  max-height: 30%;
+  max-height: 100%;
   overflow: auto;
 }
