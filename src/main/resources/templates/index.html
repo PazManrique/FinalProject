@@ -9,19 +9,22 @@
 <body>
 	<main>
 		<section id="title">
-			<h1>Introduce tu nombre y selecciona una carta</h1>
+			<h1>Stranger Choice</h1>
+			<h2>Introduce tu nombre y selecciona una carta... si te atreves</h2>
 		</section>
-		
-		<form th:action="@{/table}" th:Object="${move}" method="post">
+
+		<form th:action="@{/result}" th:Object="${move}" method="post">
+
 		<section id="input-name">
 
-			<input class="input-placeholder" name="playerName" th:field="*{playerName}" type="text" placeholder="AÑADE TU NOMBRE">
+			<input class="input-placeholder" name="playerName" th:field="${move.playerName}" type="text" placeholder="AÑADE TU NOMBRE">
 
 		</section>
 		
-		<section id="img-character">
+		<section   id="img-character">
 			<div>
-				<input name="checkbox4" class="checkbox" type="checkbox" value="4" id="myCheckbox-4"  th:field="*{playerChoice}" />
+
+				<input name="checkbox" class="checkbox" type="checkbox" value="4" id="myCheckbox-4"  th:field="*{playerChoice}" />
       			<label for="myCheckbox-4">
       			<img th:src="@{/images/mike.png}" />
       			<span class="cover-checkbox">
@@ -65,11 +68,26 @@
 		
 		<section id="buttons">
 			<button class="button-play" type="submit">Jugar</button>
-			<button class="button-results" type="submit">Ver Resultados</button>
+			<button class="button-results" type="button" th:action="@{/templates/table}">Ver Resultados</button>
 		</section>
 		</form>
 		<section id="how-game">
+
 		  	<p>¿Cómo se juega a esto?</p>
+			<div class="box">
+	<a class="button" href="#popup1">¿Cómo se juega a esto?</a>
+		</div>
+
+		<div id="popup1" class="overlay">
+			<div class="popup">
+				<h2>¿Quién gana a quién?</h2>
+				<a class="close" href="#">&times;</a>
+					<div class="content">
+						Thank to pop me out of that button, but now i'm done so you can close this window.
+					</div>
+				</div>
+			</div>
+
 		</section>
 	</main>
 	<footer>

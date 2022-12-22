@@ -8,26 +8,33 @@
 </head>
 <body>
 	<main>
-		<section id="title">
-			<h1>¿Habrás ganado?</h1>
-		</section>
-		<section id="title2">
-		<h2>¡Has perdido!</h2>
-		</section>
-		<section id="img-character">
-			<p th:each="result : ${result}">
-    		<span th:text="*{result.playerChoiceDescription}"></span>
-    		<span th:text="*{result.computerChoiceDescription}"></span>
-    		<span th:text="*{result.descriptionResult}"></span>
-    		<span th:text="*{result.dateResult}"></span>
-    		<span th:text="*{result.playerName}"></span>
-			</p>
+		<section id="result">
+		<h2>Has elegido:</h2>
+		<h3 th:text="${result.playerChoiceDescription}"></h3>
+		<h2>Upside Down ha elegido:</h2>
+		<h3 th:text="${result.computerChoiceDescription}"></h3>
+		<span class="result-description">
+    		<h1 th:text="${result.descriptionResult}"></h1>
+    	</span>
+    	</section>
 		<section id="buttons">
-			<button class="button-play" type="submit" th:value="@{/results}">Jugar</button>
+			<button class="button-play" type="submit" th:value="@{/results}">Volver a Jugar</button>
 			<button class="button-results" type="button" th:value=@{/table}>Ver Resultados</button>
 		</section>
 		<section id="how-game">
-			<p>¿Cómo se juega a esto?</p>
+			<div class="box">
+	<a class="button" href="#popup1">¿Cómo se juega a esto?</a>
+		</div>
+
+		<div id="popup1" class="overlay">
+			<div class="popup">
+				<h2>¿Quién gana a quién?</h2>
+				<a class="close" href="#">&times;</a>
+					<div class="content">
+						Thank to pop me out of that button, but now i'm done so you can close this window.
+					</div>
+				</div>
+			</div>
 		</section>
 	</main>
 	<footer>
