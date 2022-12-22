@@ -16,13 +16,6 @@ public class Dustin extends CharacterFactory {
 
 	}
 	
-	/**
-     * Parameterized constructor
-     * @param name Character's name
-     * @param number Character's number
-     * 
-     */
-	
 	public Dustin(String name, int number) {
 		super(name, number);
 		
