@@ -4,7 +4,7 @@
 <link
 	th:href="@{https://fonts.googleapis.com/css2?family=Lacquer&display=swap}"
 	rel='stylesheet' type='text/css' />
-	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 	<main>
@@ -12,31 +12,34 @@
 			<h1>Resultados</h1>
 		</section>
 		<section id=table>
-		<table>
-        <tr>
-            <th>Jugador</th>
-            <th>Resultado Jugador</th>
-            <th>Resultado Ordenador</th>
-            <th>Fecha y Hora</th>
-        </tr>
-        
-        <tr th:each="move : ${moves}">
-            <td th:text="${move.playerName}"></td>
-             <td th:text="${move.playerChoice}"></td>
-              <td th:text="${move.computerChoice}"></td>
-            <td th:text="${move.dateTime}"></td>
-        </tr>
-        </table>
+			<table>
+				<tr>
+					<th>Jugador</th>
+					<th>Resultado Jugador</th>
+					<th>Resultado Ordenador</th>
+					<th>Resultado Final</th>
+					<th>Fecha y Hora</th>
+				</tr>
+				<tr th:each="result : ${results}">
+					<td th:text="${result.playerName}"></td>
+					<td th:text="${result.playerChoiceDescription}"></td>
+					<td th:text="${result.computerChoiceDescription}"></td>
+					<td th:text="${result.descriptionResult}"></td>
+					<td th:text="${result.dateResult}"></td>
+				</tr>
+			</table>
+
 		</section>
 		<section id="buttons">
-			<a th:href="@{/}"><button class="button-play" type="button" th:action="@{/templates/index}">Volver a jugar</button></a>
-			
+			<a th:href="@{/}"><button class="button-play" type="button"
+					th:action="@{/templates/index}">Volver a jugar</button></a>
+
 		</section>
 	</main>
 	<footer>
-	<section id="copyright">
-		<p>Copyright Mazmorra Team</p>
-	</section>
+		<section id="copyright">
+			<p>Copyright Mazmorra Team</p>
+		</section>
 	</footer>
 </body>
 </html>
