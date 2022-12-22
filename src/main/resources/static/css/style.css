@@ -259,16 +259,13 @@ footer {
   margin: 70px auto;
   padding: 20px;
   background: rgba(7, 126, 30, 0.5);
-  width: 30%;
+  width: 50%;
   position: relative;
   transition: all 5s ease-in-out;
 }
 
 .instructions {
-	margin: 70px auto;
-  padding: 20px;
-  width: 100%;
-	
+  width: 80%;
 }
 
 .popup h2 {
@@ -290,7 +287,9 @@ footer {
   background: rgba(7, 126, 30, 0.5);
 }
 .popup .content {
-  max-height: 30%;
+  max-height: 50%;
   overflow: auto;
+  display: flex;
+  justify-content: center;
 }
 
