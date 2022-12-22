@@ -98,6 +98,7 @@ section {
 	box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.25);
 	border-radius: 50px;
 	font-size: 2vw;
+	cursor: url(/images/cursorst.png), pointer;
 }
 
 .button-play {
@@ -153,7 +154,7 @@ footer {
 }
 
 
-input:checked + label {
+input:checked + labelg{
   opacity: 1;
   box-shadow: 0 0 0 3px var(--background);
   padding: 10px;
@@ -217,4 +218,71 @@ footer {
 	justify-content: center;
 	align-items: center;
 	flex-flow: column;
+}
+
+.box {
+  width: 40%;
+  text-align: center;
+  padding: 2vw;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+	color: red;
+  cursor: url(/images/cursorst.png), pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: rgba(7, 126, 30, 0.5);
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  background: rgba(7, 126, 30, 0.7);
+}
+.popup .close:hover {
+  background: rgba(7, 126, 30, 0.5);
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
 }
