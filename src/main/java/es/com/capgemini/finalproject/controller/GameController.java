@@ -47,8 +47,8 @@ public class GameController  {
         }
      
      @GetMapping("/table")
-        public String listMOve(Model model) {
-            model.addAttribute("moves", resultService.resultList());
+        public String listResult(Model model) {
+            model.addAttribute("results", resultService.resultList());
             return "table";
         }
      

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import es.com.capgemini.finalproject.model.Move;
 import es.com.capgemini.finalproject.model.Result;
+import es.com.capgemini.finalproject.model.util.MoveUtil;
 import es.com.capgemini.finalproject.repo.ResultRepo;
 import jakarta.transaction.Transactional;
 @Service
@@ -20,9 +21,8 @@ public class ResultService{
 	@Autowired
 	ResultRepo resultRepo;
 	
-	public Iterable<Move> resultList(){
-		return resultRepo.findAll();
-		
+	public Iterable<Result> resultList(){
+		return MoveUtil.asResults(resultRepo.findAll());
 	}
 	
 	public Result saveResult(Move pResult) {
