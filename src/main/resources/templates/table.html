@@ -19,6 +19,7 @@
             <th>Resultado Ordenador</th>
             <th>Fecha y Hora</th>
         </tr>
+        
         <tr th:each="move : ${moves}">
             <td th:text="${move.playerName}"></td>
              <td th:text="${move.playerChoice}"></td>

@@ -11,8 +11,9 @@
 		<section id="title">
 			<h1>Introduce tu nombre y selecciona una carta</h1>
 		</section>
-		
-		<form th:action="@{/table}"  method="post">
+
+		<form th:action="@{/result}" th:Object="${move}" method="post">
+
 		<section id="input-name">
 
 			<input class="input-placeholder" name="playerName" th:field="${move.playerName}" type="text" placeholder="AÑADE TU NOMBRE">
@@ -21,13 +22,8 @@
 		
 		<section   id="img-character">
 			<div>
-<<<<<<< HEAD
 
-				<input name="checkbox" class="checkbox" type="checkbox" value="4" id="myCheckbox-4"  th:field="*{playerChoice}" />
-
-=======
 				<input name="checkbox4" class="checkbox" type="checkbox" value="4" id="myCheckbox-4"  th:field="*{playerChoice}" />
->>>>>>> develop
       			<label for="myCheckbox-4">
       			<img th:src="@{/images/mike.png}" />
       			<span class="cover-checkbox">

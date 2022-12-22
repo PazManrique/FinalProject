@@ -7,12 +7,15 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.ui.Model;
 
 import es.com.capgemini.finalproject.model.CharacterFactory;
 import es.com.capgemini.finalproject.model.Dustin;
 import es.com.capgemini.finalproject.model.Eleven;
 import es.com.capgemini.finalproject.model.Max;
 import es.com.capgemini.finalproject.model.Mike;
+import es.com.capgemini.finalproject.model.Move;
+import es.com.capgemini.finalproject.model.Result;
 import es.com.capgemini.finalproject.model.Vecna;
 
 class RockPaperScissorsTest {
