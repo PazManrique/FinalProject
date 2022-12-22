@@ -11,6 +11,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * This class has the attributes and methods of a character
+ * @author Nerea, Paz, Viviana, Cristina
+ * 
+ */
 
 
 public abstract class CharacterFactory {
@@ -25,11 +30,10 @@ public abstract class CharacterFactory {
 	protected String name;
 	protected int number;
 
-	// Constructores
-
 	/**
-	 * 
+	 * Constructors
 	 */
+	
 	public CharacterFactory(String name, int number) {
 		this.name = name;
 		this.number = number;
@@ -38,7 +42,9 @@ public abstract class CharacterFactory {
 		
 	}
 
-	// Accesos
+	/**
+	 * Access getters and setters
+	 */
 
 	public String getName() {
 		return name;
@@ -59,9 +65,6 @@ public abstract class CharacterFactory {
 	public String getDescriptionResult() {
 		return descriptionResult;
 	}
-
-	// Métodos de negocio
-	
 	
 
 	public abstract boolean isMe(int number);
@@ -69,7 +72,7 @@ public abstract class CharacterFactory {
 	public abstract int compare(CharacterFactory pCharacters);
 
 	public static CharacterFactory getInstance(int pNumber) {
-		// el padre conoce a todos sus hijos
+		
 		elements = new ArrayList<CharacterFactory>();
 		elements.add(new Dustin());
 		elements.add(new Eleven());
@@ -77,9 +80,6 @@ public abstract class CharacterFactory {
 		elements.add(new Mike());
 		elements.add(new Vecna());
 		
-		
-	
-
 		for (CharacterFactory CharacterFactory : elements) {
 			if (CharacterFactory.isMe(pNumber))
 				return CharacterFactory;

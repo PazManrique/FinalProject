@@ -1,6 +1,16 @@
 package es.com.capgemini.finalproject.model;
 
+/**
+ * This class contains the attributes and methods of a character.
+ * @author Paz, Viviana, Nerea, Cristina
+ */
+
 public class Mike extends CharacterFactory {
+	
+	 /**
+     * Constructors
+     */
+	
 	public Mike() 
 	{
 		this("mike", MIKE);
@@ -10,12 +20,22 @@ public class Mike extends CharacterFactory {
 		super(name, number);
 		
 	}
+	
+	/**
+     * Method to compare the received number and the 
+     * character number
+     */
 
 	@Override
 	public boolean isMe(int number) {
 		return number == MIKE;
 		
 	}
+	
+	/**
+     * Method that evaluates all possible cases of game result
+     * 
+     */
 	@Override
 	public int compare(CharacterFactory pCharacterFactory) {
 		 
