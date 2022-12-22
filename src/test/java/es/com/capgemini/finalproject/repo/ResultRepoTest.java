@@ -23,7 +23,7 @@ class ResultRepoTest {
 	
 	@Test
 	void testSave() {
-		Move move = new Move(1, "jugada", 4, 5);		
+		Move move = new Move(1, "nameP", 4, 5);		
 		Move moveRet = resultRepo.save(move);
 
 		assertEquals(move.getPlayerName(), moveRet.getPlayerName());
