@@ -10,7 +10,7 @@
       <h>342</h>
     </coordinates>
     <panel_attributes>
-/RockPaperScissors/
+/CharacterFactory/
 
 --
 _+ DUSTIN: int = 1_
@@ -19,21 +19,21 @@ _+ MAX: int = 3_
 _+ MIKE: int = 4_
 _+ VECNA: int = 5_
 # descriptcionResult: String
-_- elements: List&lt;RockPaperScissors&gt;_
+_- elements: List&lt;CharacterFactory&gt;_
 # name: String
 # number: int
 
 
 --
-+ RockPaperScissors(String, int)
++ CharacterFactory(String, int)
 + getName(): String
 + setName(String): void
 + getNumber(): int
 + setNumber(int): void
 + getdescriptionResults(): String
 + isMe(int): boolean
-+ compare(RockPaperScissors): int
-_+ getInstance(int): RockPaperScissors_
++ compare(characterFactory): int
+_+ getInstance(int): CharacterFactory_
 
 
 bg=YELLOW</panel_attributes>
@@ -52,7 +52,7 @@ bg=YELLOW</panel_attributes>
 + Eleven()
 + Eleven(String, int)
 + isMe(int): boolean
-+ compare(RockPaperScissors): int
++ compare(CharacterFactory): int
 
 
 bg=ORANGE</panel_attributes>
@@ -71,7 +71,7 @@ bg=ORANGE</panel_attributes>
 + Max()
 + Max(String, int)
 + isMe(int): boolean
-+ compare(RockPaperScissors): int
++ compare(CharacterFactory): int
 
 
 bg=ORANGE</panel_attributes>
@@ -90,7 +90,7 @@ bg=ORANGE</panel_attributes>
 + Mike()
 + Mike(String, int)
 + isMe(int): boolean
-+ compare(RockPaperScissors): int
++ compare(CharacterFactory): int
 
 
 bg=ORANGE</panel_attributes>
@@ -142,7 +142,7 @@ bg=ORANGE</panel_attributes>
 + Vecna()
 + Vecna(String, int)
 + isMe(int): boolean
-+ compare(RockPaperScissors): int
++ compare(CharacterFactory): int
 
 
 bg=ORANGE</panel_attributes>
@@ -161,7 +161,7 @@ bg=ORANGE</panel_attributes>
 + Dustin()
 + Dustin(String, int)
 + isMe(int): boolean
-+ compare(RockPaperScissors): int
++ compare(CharacterFactory): int
 
 
 bg=ORANGE</panel_attributes>

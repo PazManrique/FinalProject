@@ -1,10 +1,46 @@
-<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
-<title>Resultado Juego</title>
+<link th:href="@{/css/result.css}" rel="stylesheet" />
+<link
+	th:href="@{https://fonts.googleapis.com/css2?family=Lacquer&display=swap}"
+	rel='stylesheet' type='text/css' />
+	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<h1>RESULT</h1>
+	<main>
+		<section id="result">
+		<h2>Has elegido:</h2>
+		<h3 th:text="${result.playerChoiceDescription}"></h3>
+		<h2>Upside Down ha elegido:</h2>
+		<h3 th:text="${result.computerChoiceDescription}"></h3>
+		<span class="result-description">
+    		<h1 th:text="${result.descriptionResult}"></h1>
+    	</span>
+    	</section>
+		<section id="buttons">
+			<a th:href="@{/}"><button class="button-play" type="button" th:action="@{/templates/index}">Volver a jugar</button></a>
+				<a th:href="@{/table}"><button class="button-results" type="button" th:action="@{/templates/table}">Ver Resultados</button></a>
+		</section>
+		<section id="how-game">
+			<div class="box">
+	<a class="button" href="#popup1">¿Cómo se juega a esto?</a>
+		</div>
+
+		<div id="popup1" class="overlay">
+			<div class="popup">
+				<h2>¿Quién gana a quién?</h2>
+				<a class="close" href="#">&times;</a>
+					<div class="content">
+						<img class="instructions" th:src="@{/images/instructions.png}" />
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+	<section id="copyright">
+		<p>Copyright Mazmorra Team</p>
+	</section>
+	</footer>
 </body>
 </html>

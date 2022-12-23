@@ -1,47 +1,28 @@
 package es.com.capgemini.finalproject.model;
 
-import java.sql.Timestamp;
-import org.hibernate.annotations.CreationTimestamp;
+import lombok.Data;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+/**
+ * This class has the attributes and constructor for the result
+ * @author Viviana, Paz, Nerea, Cristina
+ * 
+ */
 
-
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
-@Entity
-@Table(name="results")
+@Data
 public class Result {
-	
-	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idResults;
-	
-	@Column(name="player_Name", length = 45, nullable = false)
 	private String playerName;
+	private String playerChoiceDescription;
+	private String computerChoiceDescription;
+	private String descriptionResult;
+	private String dateResult;
 	
-    
-    @Column(name="player_Choice", length = 45, nullable = false)
-	private String playerChoice;
-    
-    @Column(name="computer_Choice", length = 45, nullable = false)
-	private String computerChoice;
-
-    
-    @Column(name = "date_Time")
-    @CreationTimestamp
-    private Timestamp dateTime;
-
+	public Result(String playerName, String playerChoiceDescription, String computerChoiceDescription,
+			String descriptionResult, String dateResult) {
+		super();
+		this.playerName = playerName;
+		this.playerChoiceDescription = playerChoiceDescription;
+		this.computerChoiceDescription = computerChoiceDescription;
+		this.descriptionResult = descriptionResult;
+		this.dateResult = dateResult;
+	}
 }

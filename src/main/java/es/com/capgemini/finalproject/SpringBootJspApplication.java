@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
+import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
+
 @SpringBootApplication(scanBasePackages = "es.com.capgemini.finalproject")
 public class SpringBootJspApplication extends SpringBootServletInitializer {
 
@@ -17,5 +19,6 @@ public class SpringBootJspApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootJspApplication.class);
+        
     }
 }
